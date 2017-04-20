@@ -1,7 +1,28 @@
 == Redmine Circle theme
 
-Copyright (C) 2011-2014 Kirill Bezrukov
-http://www.redminecrm.com/
+Copyright (C) 2011-2017 Kirill Bezrukov
+https://www.redmineup.com/pages/themes/circle
+
+== 2017-03-01 v2.1.1
+
+* Select2 styles for new CRM
+* Date field styles
+* Glyphs for moving arrows on the main menu
+
+== 2016-06-22 v2.1.0
+
+* New object "+" button support
+* Tabs buttons styles
+* Gravatar fixes for Redmine 3.3
+* Responsive colors
+* Reverted hideable sidebar
+
+== 2015-09-22 v2.0.0
+
+* Hide sidebar button (no need Hide Sidebar plugin anymore)
+* Add hidden project menu items to the dropdown menu
+* Add hidden top menu items to the dropdown menu
+* Responsive styles
 
 == 2014-04-09 v1.0.2
 
