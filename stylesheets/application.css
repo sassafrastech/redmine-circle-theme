@@ -1198,6 +1198,10 @@ div.details {padding: 20px !important;}
   width: inherit;
 }
 
+#main.nosidebar #content {
+  margin-right: inherit;
+}
+
 #sidebar {
   width: 225px;
 }
