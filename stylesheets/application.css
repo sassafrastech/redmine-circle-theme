@@ -551,7 +551,7 @@ div.modal {
 .ui-menu.ui-widget-content {border-radius: 3px;}
 .ui-menu .ui-menu-item:hover {font-weight:normal; background:#eef5fd; color:inherit !important; border:1px solid #eef5fd;}
 .ui-menu .ui-menu-item.ui-state-focus {
-	color:inherit; 
+	color:inherit;
 	border-left-color: #ddd;
 	border-right-color: #ddd;
 }
@@ -1192,15 +1192,6 @@ div.details {padding: 20px !important;}
 
 /*************************************/
 /* SMALLER SIDEBAR                   */
-
-#content {
-  margin-right: 250px;
-  width: inherit;
-}
-
-#main.nosidebar #content {
-  margin-right: inherit;
-}
 
 #sidebar {
   width: 225px;
