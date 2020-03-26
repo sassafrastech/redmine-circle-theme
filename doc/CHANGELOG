@@ -1,7 +1,15 @@
 == Redmine Circle theme
 
-Copyright (C) 2011-2017 Kirill Bezrukov
+Copyright (C) 2011-2019 Kirill Bezrukov
 https://www.redmineup.com/pages/themes/circle
+
+== 2019-12-23 v2.1.5
+
+* Redmine 4.1 support
+
+== 2017-07-18 v2.1.4
+
+* Redmine 3.4 fixes
 
 == 2017-07-18 v2.1.3
 

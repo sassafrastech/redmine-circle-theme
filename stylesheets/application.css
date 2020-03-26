@@ -1,6 +1,6 @@
 @import url(../../../stylesheets/application.css);
 
-/* Circle Theme version 2.1.3, Copyright (C) 2011 - 2017 Kirill Bezrukov www.redmineup.com */
+/* Circle Theme version 2.1.5, Copyright (C) 2011 - 2019 Kirill Bezrukov www.redmineup.com */
 
 /**********************************************************/
 /* LOGO */
@@ -36,6 +36,7 @@ body {
 input, textarea, select {
 	font-family: "helvetica neue",helvetica,arial,sans-serif;
 	font-size: 12px;
+	box-sizing: border-box;
 }
 
 a, a:link, a:visited {
@@ -43,7 +44,7 @@ a, a:link, a:visited {
 }
 
 #main {
-	background-color: #fafafa;
+	background-color: #eeeeee;
 	padding: 0px 20px;
 }
 
@@ -97,11 +98,16 @@ h2 {
 }
 
 #sidebar a.selected {
-	background-color: #fafafa;
+	background-color: #EEEEEE;
+	background-position: inherit;
 	color: #3d454c;
-	line-height: inherit;
 	padding: inherit;
 	margin-left: inherit;
+	line-height: 1.3em;
+}
+
+#sidebar #admin-menu a.selected {
+  line-height: 1.7em;
 }
 
 img.gravatar {
@@ -372,10 +378,11 @@ div.flash.warning, .conflict {
 	padding: 30px;
 }
 
+#login-form input[type=submit] {height: 32px}
 #login-form input[type=text],
 #login-form input[type=password] {
 	padding: 1px 10px;
-	height: 24px;
+	height: 26px;
 }
 
 #login-form input#login-submit {
@@ -469,6 +476,19 @@ div#content #context-menu li:hover {
 div#content #context-menu a.disabled, div#content #context-menu a.disabled:hover {
 	color: #aaa;
 }
+
+.contextual .drdn-items>a {
+	color: #333;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.contextual .drdn-items>a:hover {
+	background-color: #f2f4f5;
+	color: #3d454c;
+	border: 1px solid #f2f4f5;
+	border-radius: 0px;
+}
 /**********************************************************/
 /* TIP */
 /**********************************************************/
@@ -528,9 +548,14 @@ div.modal {
 	margin: -1px;
 }
 
-.ui-widget-content {
-	background: white;
+.ui-menu.ui-widget-content {border-radius: 3px;}
+.ui-menu .ui-menu-item:hover {font-weight:normal; background:#eef5fd; color:inherit !important; border:1px solid #eef5fd;}
+.ui-menu .ui-menu-item.ui-state-focus {
+	color:inherit; 
+	border-left-color: #ddd;
+	border-right-color: #ddd;
 }
+
 .ui-widget-content select, .ui-widget-content input[type="text"],
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 12px;
@@ -556,6 +581,9 @@ div.modal {
 	border: 1px solid #f2f4f5;
 }
 
+.ui-datepicker.ui-widget-content {
+	background: #fff;
+}
 .ui-datepicker .ui-datepicker-buttonpane button {
 	font-weight: normal;
 }
@@ -620,12 +648,15 @@ div.modal {
 	padding: 10px;
 }
 
-.ui-datepicker .ui-datepicker-buttonpane {
-	padding-top: 0.5em;
-}
-
 .ui-datepicker-week-col, .ui-datepicker .ui-priority-secondary {
 	color: #aaa;
+}
+
+body .ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time_label {
+	padding-top: 6px;
+	color: #aaa;
+	font-weight: 500;
+	font-size: 0.9em;
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
@@ -734,6 +765,7 @@ input[type="text"],
 input[type="date"],
 input[type="password"],
 input[type="search"],
+input[type="number"],
 fieldset#filters td.values input {
   padding: 1px 10px;
   background-color: #fff;
@@ -743,7 +775,7 @@ fieldset#filters td.values input {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  height: 22px;
+  height: 26px;
   border: 1px solid #e0e2e3;
   margin: 0px;
 }
@@ -932,6 +964,12 @@ img.ui-datepicker-trigger {
 
 
 /**********************************************************/
+/* GANTT CHART */
+/**********************************************************/
+.gantt_subjects div {height: 20px;}
+.issue-subject .gravatar {margin-right: 2px;}
+
+/**********************************************************/
 /* FORMS SPECIFIC */
 /**********************************************************/
 input#issue_subject,
@@ -1001,6 +1039,7 @@ input#content_comments {
 /**********************************************************/
 /* TABLES */
 /**********************************************************/
+table.list, .table-list {	border-collapse: collapse; border-radius: 0px;}
 table.list tbody td, table.list tbody tr:hover td { border: solid 1px #d7d7d7; }
 table.list thead th {
     border-width: 1px;
@@ -1013,7 +1052,8 @@ table.list thead th {
 
 table.list td,
 table.list th {padding: 5px;}
-table.list input[type="checkbox"] {margin-top: 6px;}
+table.list td.icon {padding-left: 20px;}
+table.list input[type="checkbox"] {vertical-align: baseline;}
 
 table.list tbody tr:hover {background-color: #dfeff7;}
 table.list tr.issue a { color: #666; }
@@ -1045,6 +1085,16 @@ tr.even.priority-lowest, table.list tbody tr.even.priority-lowest:hover { color:
 tr.even.priority-lowest { background: #f2faff; }
 tr.priority-lowest a { color: #559; }
 tr.odd.priority-lowest td, tr.even.priority-lowest td { border-color: #D2EAFA; }
+
+/**********************************************************/
+/* ISSUES */
+/**********************************************************/
+#history, #history .tab-content {border: 0px}
+
+/**********************************************************/
+/* ROADMAP */
+/**********************************************************/
+div#roadmap .related-issues td.assigned_to {padding: 0 3px;}
 
 /**********************************************************/
 /* OBJECTS */
